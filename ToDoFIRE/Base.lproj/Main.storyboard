@@ -72,7 +72,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hty-VE-ncb"/>
-                                                    <segue destination="VZs-Pf-LEZ" kind="show" identifier="tasksSegue" id="KFx-k2-gTG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn6-KH-nyo">
@@ -115,6 +114,7 @@
                         <outlet property="emailTextField" destination="h6X-HB-5sB" id="ckr-fk-W89"/>
                         <outlet property="passwordTextField" destination="3cV-1G-uYm" id="sFN-oS-aIz"/>
                         <outlet property="warnLabel" destination="mvc-kr-OEk" id="GZc-mO-ysW"/>
+                        <segue destination="VZs-Pf-LEZ" kind="show" identifier="tasksSegue" id="FV0-Jf-Mwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,6 +163,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="4JK-5S-mvC">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="w0o-W5-bUp">
+                            <connections>
+                                <action selector="signOutTapped:" destination="JWm-JW-Ver" id="8TN-lg-1f9"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cVk-RQ-doA">
                             <connections>
                                 <action selector="addTapped:" destination="JWm-JW-Ver" id="9wq-Mb-TGI"/>
@@ -182,6 +187,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZs-Pf-LEZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aGT-EV-Ykt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yFC-Be-6h7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
